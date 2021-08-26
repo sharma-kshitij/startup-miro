@@ -10,9 +10,35 @@
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
 </head>
 
-<body>
+<style>
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+    }
+
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<div id="loader" class="loader"></div>
+
+
+<body onload="loadWebsite()" id="body">
     <header>
         <div class="container">
             <nav class="nav">
@@ -21,13 +47,13 @@
                 </a>
 
                 <ul class="nav-list">
-                    <li class="nav-item"> 
+                    <li class="nav-item">
                         <a href="" class="nav-link">About</a>
                     </li>
-                    <li class="nav-item"> 
+                    <li class="nav-item">
                         <a href="" class="nav-link">Case Study</a>
                     </li>
-                    <li class="nav-item"> 
+                    <li class="nav-item">
                         <a href="" class="nav-link">FAQ</a>
                     </li>
                 </ul>
@@ -40,10 +66,12 @@
             <div class="content">
                 <div class="content-details">
                     <h1 class="title">Time Travel to the future</h1>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, accusamus labore? Dolor quaerat ullam doloribus fuga alias dolorum, eum porro qui facere sint iure minus minima, magni sit harum voluptas?</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, accusamus
+                        labore? Dolor quaerat ullam doloribus fuga alias dolorum, eum porro qui facere sint iure minus
+                        minima, magni sit harum voluptas?</p>
                     <div class="search">
                         <input type="text" class="search-bar" placeholder="Your Email" required name="" id="">
-                        <input  class="search-btn" type="button" value="Join">
+                        <input class="search-btn" type="button" value="Join">
                     </div>
 
                     <div class="sm-list">
